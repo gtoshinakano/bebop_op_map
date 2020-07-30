@@ -110,6 +110,6 @@ offlineLayer.on('offline:remove-error', function (err) {
 });
 
 map.setView({
-    lat: 48.858,
-    lng: 2.294
+  lat: 43.024656,
+  lng: 141.344694,
 }, 18);
