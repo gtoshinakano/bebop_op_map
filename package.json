@@ -1,0 +1,23 @@
+{
+  "name": "bebop_op_map",
+  "version": "1.0.0",
+  "description": "Plot Bebop Drone on Leaflet Offline Map",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gtoshinakano/bebop_op_map.git"
+  },
+  "author": "Gabriel Toshinori Nakano",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/gtoshinakano/bebop_op_map/issues"
+  },
+  "homepage": "https://github.com/gtoshinakano/bebop_op_map#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
