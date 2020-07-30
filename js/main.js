@@ -116,6 +116,25 @@ map.setView({
 
 const socket = io('http://127.0.0.1:7575');
 
+/* Create drone Icon */
+var droneIcon = L.icon({
+    iconUrl: 'assets/bebop-icon.png',
+    iconSize: [60, 37]
+});
+
+var drone = L.marker({ lat: 43.024656, lng: 141.344694 },
+  { icon: droneIcon, alt: 'oi to aqui' }
+)
+
 socket.on("connect", function() {
   console.log('connected');
+})
+
+socket.on("gps_ready", function(ready){
+  if(ready) drone.addTo(map);
+  else map.removeLayer(drone)
+})
+
+socket.on("gps_position_changed", function(data) {
+  drone.setLatLng([data.latitude, data.longitude])
 })
